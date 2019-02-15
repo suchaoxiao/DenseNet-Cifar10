@@ -34,7 +34,7 @@ def main(resume=False):
     print('Now,we start compiling DenseNet model...')
     model = createDenseNet(nb_classes=nb_classes,img_dim=img_dim,depth=densenet_depth,
                   growth_rate = densenet_growth_rate)
-    if resume == True: 
+    if resume == False:
         model.load_weights(check_point_file)
     
     optimizer = Adam()
